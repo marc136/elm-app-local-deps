@@ -1,0 +1,12 @@
+{
+  "name": "elm-app-local",
+  "version": "0.0.1",
+  "description": "This project is bootstrapped with [Create Elm App](https://github.com/halfzebra/create-elm-app).",
+  "scripts": {
+    "test": "node elm test",
+    "start": "node elm"
+  },
+  "dependencies": {
+    "create-elm-app": "^1.1.2"
+  }
+}
