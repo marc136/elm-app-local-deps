@@ -9,11 +9,11 @@ You can find the most recent version of this guide [here](https://github.com/hal
 - [Installing Elm packages](#installing-elm-packages)
 - [Installing JavaScript packages](#installing-javascript-packages)
 - [Available scripts](#available-scripts)
-  - [elm-app build](#elm-app-build)
-  - [elm-app start](#elm-app-start)
-  - [elm-app test](#elm-app-test)
-  - [elm-app eject](#elm-app-eject)
-  - [elm-app <elm-platform-comand>](#elm-app-elm-platform-comand)
+  - [node elm build](#node-elm-build)
+  - [node elm start](#node-elm-start)
+  - [node elm test](#node-elm-test)
+  - [node elm eject](#node-elm-eject)
+  - [node elm <elm-platform-comand>](#node-elm-elm-platform-comand)
     - [package](#package)
     - [repl](#repl)
     - [make](#make)
@@ -40,7 +40,7 @@ You are very welcome with any [feedback](https://github.com/halfzebra/create-elm
 ## Installing Elm packages
 
 ```sh
-elm-app package install <package-name>
+node elm package install <package-name>
 ```
 
 ## Installing JavaScript packages
@@ -87,28 +87,28 @@ You may create subdirectories inside src.
 
 ## Available scripts
 In the project directory you can run:
-### `elm-app build`
+### `node elm build`
 Builds the app for production to the `build` folder.  
 
 The build is minified, and the filenames include the hashes.  
 Your app is ready to be deployed!
 
-### `elm-app start`
+### `node elm start`
 Runs the app in the development mode.  
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.  
 You will also see any lint errors in the console.
 
-### `elm-app test`
+### `node elm test`
 Run tests with [node-test-runner](https://github.com/rtfeldman/node-test-runner/tree/master)
 
 You can make test runner watch project files by running:
 ```sh
-elm-app test --watch
+node elm test --watch
 ```
 
-### `elm-app eject`
+### `node elm eject`
 **Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
 If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time.
@@ -117,7 +117,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to use 'eject' The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However, we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### `elm-app <elm-platform-comand>`
+### `node elm <elm-platform-comand>`
 Create Elm App does not rely on the global installation of Elm Platform, but you still can use it's local Elm Platform to access default command line tools:
 
 #### `package`
@@ -288,13 +288,13 @@ Create Elm App uses [elm-test](https://github.com/rtfeldman/node-test-runner) as
 To use packages in tests, you also need to install them in `tests` directory.
 
 ```bash
-elm-app test --add-dependencies elm-package.json 
+node elm test --add-dependencies elm-package.json 
 ```
 
 ## Deployment
 
 
-`elm-app build` creates a `build` directory with a production build of your app. Set up your favourite HTTP server so that a visitor to your site is served `index.html`, and requests to static paths like `/static/js/main.<hash>.js` are served with the contents of the `/static/js/main.<hash>.js` file.
+`node elm build` creates a `build` directory with a production build of your app. Set up your favourite HTTP server so that a visitor to your site is served `index.html`, and requests to static paths like `/static/js/main.<hash>.js` are served with the contents of the `/static/js/main.<hash>.js` file.
 
 ### Static Server
 
